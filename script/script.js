@@ -1,14 +1,12 @@
 const alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
-const randomIndex = Math.floor(Math.random() * alphabet.length);
-const randomIndex1 = Math.floor(Math.random() * alphabet.length);
-const randomIndex2 = Math.floor(Math.random() * alphabet.length);
-const randomIndex3 = Math.floor(Math.random() * alphabet.length);
+
+const getRandomLetter = () => {
+  const randomIndex = Math.floor(Math.random() * alphabet.length);
+  return alphabet[randomIndex];
+};
 
 const randomWord =
-  alphabet[randomIndex] +
-  alphabet[randomIndex1] +
-  alphabet[randomIndex2] +
-  alphabet[randomIndex3];
+  getRandomLetter() + getRandomLetter() + getRandomLetter() + getRandomLetter();
 
 console.log(`Cлучайное слово из четырёх букв: ${randomWord}`);
 alert(`Cлучайное слово из четырёх букв: ${randomWord}`);
